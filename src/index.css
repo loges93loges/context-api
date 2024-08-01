@@ -44,3 +44,9 @@ button {
 .images{
   width: 100px;
 }
+button{
+  background-color: rgb(44, 167, 33);
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+}
