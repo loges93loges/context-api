@@ -17,6 +17,11 @@ const ProductList = () => {
         <img className='images' src={item.image} alt={item.title} />
         <h3>{item.title}</h3>
         <p>{item.description}</p>
+        <div>
+        <p><b>Rating:</b>{item.rate}   <b>Count:</b>{item.count}</p>
+       
+        
+        </div>
         <p>${item.price.toFixed(2)}</p>
         <button onClick={() => addToCart(item.id)}>Add to Cart</button>
     </div>
