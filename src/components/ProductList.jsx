@@ -14,7 +14,7 @@ const ProductList = () => {
             <div className="product-list">
             {state.items.map(item => (
     <div key={item.id} className="product-item">
-        <img src={item.image} alt={item.title} />
+        <img className='images' src={item.image} alt={item.title} />
         <h3>{item.title}</h3>
         <p>{item.description}</p>
         <p>${item.price.toFixed(2)}</p>
