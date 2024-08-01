@@ -40,7 +40,8 @@ const CartProvider = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, initialState);
 
     useEffect(() => {
-        fetch('/products.json')
+        fetch(`${process.env.PUBLIC_URL}/products.json`)
+
             .then(response => response.json())
             .then(data => {
                 const productsWithQuantity = data.products.map(product => ({ ...product, quantity: 0 }));
