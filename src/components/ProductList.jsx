@@ -12,15 +12,16 @@ const ProductList = () => {
         <div>
             <h2>Product List</h2>
             <div className="product-list">
-                {state.items.map(item => (
-                    <div key={item.id} className="product-item">
-                        <img src={item.image} alt={item.title} />
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
-                        <p>${item.price.toFixed(2)}</p>
-                        <button onClick={() => addToCart(item.id)}>Add to Cart</button>
-                    </div>
-                ))}
+            {state.items.map(item => (
+    <div key={item.id} className="product-item">
+        <img src={item.image} alt={item.title} />
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+        <p>${item.price.toFixed(2)}</p>
+        <button onClick={() => addToCart(item.id)}>Add to Cart</button>
+    </div>
+))}
+
             </div>
         </div>
     );

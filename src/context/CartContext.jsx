@@ -41,7 +41,6 @@ const CartProvider = ({ children }) => {
 
     useEffect(() => {
         fetch('/products.json')
-
             .then(response => response.json())
             .then(data => {
                 const productsWithQuantity = data.products.map(product => ({ ...product, quantity: 0 }));
@@ -58,3 +57,4 @@ const CartProvider = ({ children }) => {
 };
 
 export { CartContext, CartProvider };
+
